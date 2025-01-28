@@ -1,0 +1,258 @@
+Name: DataStores
+Type: DataStoresCategoryFolder
+Children:
+- Name: LocalInfluxDBDatabase
+  Id: g=58e558a475ef69d7eb7951e1d949a73b
+  Type: InfluxDBStoreLocal
+  Children:
+  - Name: RetentionPeriod
+    Type: BaseDataVariableType
+    DataType: Duration
+    Value: "0:12:00:00.0000000"
+  - Name: Username
+    Type: BaseDataVariableType
+    DataType: Password
+    AccessLevel: Read
+    Value: "2cYDJ6Uf"
+  - Name: Password
+    Type: BaseDataVariableType
+    DataType: Password
+    AccessLevel: Read
+    Value: "akxw1VytpD2UmTOx"
+  - Name: Token
+    Type: BaseDataVariableType
+    DataType: Password
+    AccessLevel: Read
+    Value: "qIP9A32AOi0JXk8WkqiIhYU9"
+  - Name: Organization
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+    Value: "Rockwell"
+  - Name: Bucket
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+    Value: "bucket"
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: DataLogger1
+      Type: LocalInfluxDBStoreTable
+      Children:
+      - Name: Tags
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=13;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: Sine
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Cosine
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Ramp
+          Type: StoreColumn
+          DataType: Int32
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=13;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=59
+    Direction: Forward
+- Name: RemoteInfluxDBDatabase1
+  Id: g=945aea28700deae4c5758377f7a584fa
+  Type: InfluxDBStoreRemote
+  Children:
+  - Name: Server
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "172.19.17.72"
+  - Name: Port
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 8086
+  - Name: UseSSL
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SFEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: SFBufferMaxSize
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1000
+  - Name: SFBufferUsage
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: SFBufferOverflow
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Tables
+    Type: BaseObjectType
+    Children:
+    - Name: DataLogger2
+      Type: RemoteInfluxDBStoreTable
+      Children:
+      - Name: Tags
+        Type: BaseObjectType
+      - Class: Reference
+        Target: ns=13;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=13;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: Sine
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Cosine
+          Type: StoreColumn
+          DataType: Int32
+        - Name: Ramp
+          Type: StoreColumn
+          DataType: Int32
+  - Name: Token
+    Type: BaseDataVariableType
+    DataType: Password
+    Value: "MyVeryLongAndS3cr3tTok3nToWriteD4t4"
+  - Name: Organization
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "organization"
+  - Name: Bucket
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "bucket"
+  - Name: MaxColumnNameLength
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=13;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=13;i=59
+    Direction: Forward
